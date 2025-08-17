@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q2 Earnings — Interactive RevealJS Deck</title>
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css" />
+
+  <style>
+    /* Custom tweaks for finance look */
+    .reveal .title-email { font-size: 0.8rem; opacity: 0.85; }
+    .kpi { display:grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 1.2rem; }
+    .kpi .card { border-radius: 16px; padding: 1rem 1.2rem; background: rgba(255,255,255,0.06); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .kpi .label { font-size: .9rem; opacity: .8; }
+    .kpi .value { font-size: 1.6rem; font-weight: 700; }
+    .reveal .small { font-size: .8rem; }
+    .reveal pre code { font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide with email -->
+      <section>
+        <h2>Quarterly Earnings Report — Q2</h2>
+        <p class="title-email">Prepared by: 22f3002203@ds.study.iitm.ac.in</p>
+        <p class="fragment">Interactive, data‑driven, and remote‑friendly</p>
+        <aside class="notes">
+          Welcome everyone. This deck demonstrates a modern RevealJS workflow for financial reporting: 
+          animated fragments to stage insights, code + math for transparency, and notes for speaker guidance.
+        </aside>
+      </section>
+
+      <!-- Markdown Slide (inline) -->
+      <section data-markdown>
+        <textarea data-template>
+## Q2 Highlights _(Markdown)_
+
+- **Revenue:** $1.24B *(+8% YoY)*
+- **Gross Margin:** 42.1%
+- **EPS (Diluted):** $1.18
+- **Cash & Equivalents:** $2.9B
+
+> Built with [RevealJS](https://revealjs.com/) using the Markdown plugin.
+
+*Speaker hint:* Call out that this slide proves Markdown support.
+        </textarea>
+        <aside class="notes">This content is authored in Markdown and rendered at runtime. Emphasize how this enables quick edits for last‑minute changes.</aside>
+      </section>
+
+      <!-- Animated KPIs with fragments -->
+      <section>
+        <h3>Key Performance Indicators</h3>
+        <div class="kpi">
+          <div class="card fragment">
+            <div class="label">Revenue</div>
+            <div class="value">$1.24B</div>
+            <div class="small">+8% YoY</div>
+          </div>
+          <div class="card fragment">
+            <div class="label">Operating Income</div>
+            <div class="value">$246M</div>
+            <div class="small">+90 bps margin</div>
+          </div>
+          <div class="card fragment">
+            <div class="label">Free Cash Flow</div>
+            <div class="value">$178M</div>
+            <div class="small">Conversion 72%</div>
+          </div>
+        </div>
+        <aside class="notes">Reveal KPIs one by one to keep attention. Pause after each to discuss drivers and risks.</aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h3>Reproducible Metrics (Code)</h3>
+        <pre><code class="language-python">from math import pow
+
+# Simple financial helpers for the demo
+
+def cagr(begin, end, years):
+    return pow(end / begin, 1/years) - 1
+
+def roe(net_income, equity):
+    return net_income / equity
+
+print("CAGR: ", round(cagr(950, 1240, 3) * 100, 2), "%")
+print("ROE:  ", round(roe(246, 1680) * 100, 2), "%")
+</code></pre>
+        <p class="small">Syntax highlighting provided by the <code>highlight</code> plugin.</p>
+        <aside class="notes">Explain how analysts can copy/paste or run snippets in notebooks. Keep examples minimal but verifiable.</aside>
+      </section>
+
+      <!-- Math / Financial formulas -->
+      <section>
+        <h3>Financial Formulas (MathJax)</h3>
+        <p class="fragment">Net Present Value (NPV): \( \mathrm{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \)</p>
+        <p class="fragment">Weighted Average Cost of Capital (WACC): \( \mathrm{WACC} = \tfrac{E}{V} r_e + \tfrac{D}{V} r_d (1-\tau) \)</p>
+        <p class="fragment">Earnings Per Share (EPS): \( \mathrm{EPS} = \tfrac{\text{Net Income} - \text{Dividends}}{\text{Weighted Avg. Shares}} \)</p>
+        <aside class="notes">Reveal the formulas sequentially; tie back to assumptions (discount rate r, capital mix E/D).</aside>
+      </section>
+
+      <!-- Speaker-noted walkthrough -->
+      <section>
+        <h3>Guided Narrative</h3>
+        <ul>
+          <li class="fragment fade-in-then-semi-out">Macro headwinds moderated sequentially</li>
+          <li class="fragment fade-in-then-semi-out">Pricing actions held; churn stabilized</li>
+          <li class="fragment fade-in-then-semi-out">Capex discipline improved FCF conversion</li>
+        </ul>
+        <aside class="notes">Use this to transition to the outlook slide. Invite questions on sensitivity: demand, cost of capital, and FX.</aside>
+      </section>
+
+      <!-- Print/export hint -->
+      <section>
+        <h3>Export &amp; Share</h3>
+        <p>Press <kbd>S</kbd> for speaker notes, <kbd>F</kbd> for fullscreen, <kbd>?</kbd> for help. Use the built‑in print stylesheet for PDF export.</p>
+        <aside class="notes">On GitHub Pages this will be publicly accessible; you can also export to PDF for archiving.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js and plugins (ES modules in v5) -->
+  <script type="module">
+    import Reveal from 'https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.esm.js';
+    import Markdown from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.esm.js';
+    import Highlight from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.esm.js';
+    import Notes from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.esm.js';
+    import MathJax from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.esm.js';
+
+    const deck = new Reveal({
+      hash: true,
+      slideNumber: true,
+      transition: 'slide',
+      plugins: [ Markdown, Highlight, Notes, MathJax ],
+      mathjax3: {
+        tex: { inlineMath: [['\\(','\\)'], ['$', '$']] },
+        options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] }
+      }
+    });
+
+    deck.initialize();
+  </script>
+</body>
+</html>

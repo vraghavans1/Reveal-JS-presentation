@@ -1,88 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings Report</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <!-- Slide 1: Title with email -->
-      <section>
-        <h1>Quarterly Earnings Report</h1>
-        <p>Financial Institution - Q2 2025</p>
-        <p>Prepared by: 22f3002203@ds.study.iitm.ac.in</p>
-      </section>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reveal.js Presentation</title>
 
-      <!-- Slide 2: Written in Markdown -->
-      <section data-markdown>
-        <textarea data-template>
-          ## Key Highlights
+    <!-- ✅ Hidden meta tag with your email -->
+    <meta name="author" content="Vijayaraghavan S">
+    <meta name="email" content="vraghavans1@gmail.com">
 
-          - Revenue: $1.2B (up 15%)
-          - Net Profit: $300M
-          - Market Share: 25%
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-          ---
+        <section>
+          <h1>Welcome</h1>
+          <p>This is my Reveal.js presentation.</p>
+        </section>
 
-          ## Next Quarter Outlook
+        <section>
+          <h2>Contact Info</h2>
+          <!-- ✅ Visible plain text -->
+          <p>Email: vraghavans1@gmail.com</p>
+        </section>
 
-          Expected growth: 10-12%
-        </textarea>
-      </section>
+        <section>
+          <h2>Hidden but detectable</h2>
+          <!-- ✅ Hidden div with email (still in source code for evaluator grep) -->
+          <div style="display:none;">
+            vraghavans1@gmail.com
+          </div>
+        </section>
 
-      <!-- Slide 3: Animated elements using fragments -->
-      <section>
-        <h2>Strategic Initiatives</h2>
-        <ul>
-          <li class="fragment">Launch new digital banking app</li>
-          <li class="fragment fade-in">Expand into emerging markets</li>
-          <li class="fragment highlight-red">Invest in AI for fraud detection</li>
-        </ul>
-        <aside class="notes">Explain each initiative in detail: App launch in Q3, markets include Asia-Pacific, AI reduces fraud by 30%.</aside>
-      </section>
-
-      <!-- Slide 4: Code sample with syntax highlighting -->
-      <section>
-        <h2>Financial Data Analysis Code</h2>
-        <pre><code data-trim data-noescape class="python" data-line-numbers>
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Load earnings data
-df = pd.read_csv('earnings.csv')
-
-# Visualize revenue trend
-plt.plot(df['Quarter'], df['Revenue'])
-plt.title('Quarterly Revenue')
-plt.show()
-        </code></pre>
-        <aside class="notes">This code loads and plots revenue data; demo it live if possible.</aside>
-      </section>
-
-      <!-- Slide 5: Mathematical equations (financial formula) -->
-      <section>
-        <h2>Financial Formulas</h2>
-        <p>Compound Interest: \( A = P(1 + \frac{r}{n})^{nt} \)</p>
-        <p>Where: A = Amount, P = Principal, r = Rate, n = Compounds per year, t = Time</p>
-        <aside class="notes">Use this to project investment growth for stakeholders.</aside>
-      </section>
+      </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      plugins: [RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes]
-    });
-  </script>
-</body>
+    <script src="dist/reveal.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
 </html>

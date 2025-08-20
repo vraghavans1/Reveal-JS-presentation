@@ -3,94 +3,108 @@
   <head>
     <meta charset="utf-8">
     <title>Quarterly Earnings Report - 22f3002203@ds.study.iitm.ac.in</title>
-    <meta name="email" content="22f3002203@ds.study.iitm.ac.in">
-    <style>
-      .hidden-email { display: none; }
-      footer { position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 14px; color: #aaa; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- RevealJS Core -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+    <!-- Highlight.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
 
-        <!-- Title slide -->
+        <!-- Title Slide -->
         <section>
           <h1>Quarterly Earnings Report</h1>
-          <h3>22f3002203@ds.study.iitm.ac.in</h3>
-          <p>Contact: 22f3002203@ds.study.iitm.ac.in</p>
+          <h3>Presented by: 22f3002203@ds.study.iitm.ac.in</h3>
+          <p>Email: 22f3002203@ds.study.iitm.ac.in</p>
           <aside class="notes">
-            Welcome everyone. This is the quarterly earnings report with my contact email included.
+            Welcome stakeholders, this presentation covers our quarterly performance.
           </aside>
         </section>
 
-        <!-- Markdown slide -->
+        <!-- Markdown Slide -->
         <section data-markdown>
           <textarea data-template>
-# Financial Overview
+            ## Highlights (Markdown Slide)
 
-- Revenue grew by 15% YoY <!-- .element: class="fragment" -->
-- Expenses reduced by 8% <!-- .element: class="fragment" -->
-- Net profit margin up to 12% <!-- .element: class="fragment" -->
+            - Revenue growth **10% YoY**
+            - Expenses reduced by *5%*
+            - Market share increased 📈
 
-**Contact:** 22f3002203@ds.study.iitm.ac.in
+            _Prepared by: 22f3002203@ds.study.iitm.ac.in_
           </textarea>
+          <aside class="notes">
+            This slide is written in Markdown and automatically rendered.
+          </aside>
         </section>
 
-        <!-- Code sample -->
+        <!-- Animated Fragments -->
         <section>
-          <h2>Code Sample</h2>
-          <pre><code class="language-python">
-def net_profit(revenue, expenses):
-    return revenue - expenses
+          <h2>Key Achievements</h2>
+          <p class="fragment">Expanded into 3 new markets</p>
+          <p class="fragment">Increased customer retention by 12%</p>
+          <p class="fragment">Launched new digital platform</p>
+          <aside class="notes">
+            Present these achievements one by one for emphasis.
+          </aside>
+        </section>
 
-print(net_profit(1000000, 750000))
+        <!-- Code Sample -->
+        <section>
+          <h2>Data Processing Example</h2>
+          <pre><code class="language-python">
+import pandas as pd
+
+# Load quarterly data
+df = pd.read_csv("earnings.csv")
+
+# Calculate profit margin
+df["profit_margin"] = df["net_income"] / df["revenue"]
+print(df.head())
           </code></pre>
           <aside class="notes">
-            Here I show a Python function to calculate net profit.
+            Demonstrate Python code with syntax highlighting for financial data analysis.
           </aside>
         </section>
 
-        <!-- Math formula -->
+        <!-- Math Formulas -->
         <section>
           <h2>Financial Formula</h2>
+          <p>Net Present Value (NPV):</p>
           <p>
-            Net Present Value (NPV):  
-            $$NPV = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t}$$
+            \[
+              NPV = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t}
+            \]
+          </p>
+          <p>Compound Interest:</p>
+          <p>
+            \[
+              A = P \times \left(1 + \frac{r}{n}\right)^{nt}
+            \]
           </p>
           <aside class="notes">
-            This formula is critical for evaluating investments.
+            These formulas are critical for evaluating investments and interest growth.
           </aside>
         </section>
-
-        <!-- Plain paragraph with email -->
-        <section>
-          <h2>Contact Information</h2>
-          <p>My email is: 22f3002203@ds.study.iitm.ac.in</p>
-        </section>
-
-        <!-- Hidden email div -->
-        <div class="hidden-email">22f3002203@ds.study.iitm.ac.in</div>
 
       </div>
     </div>
 
-    <!-- Footer with email on all slides -->
-    <footer>22f3002203@ds.study.iitm.ac.in</footer>
-
+    <!-- RevealJS -->
     <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
 
     <script>
       Reveal.initialize({
         hash: true,
-        plugins: [ RevealMarkdown, RevealMath.KaTeX ]
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
       });
-      hljs.highlightAll();
     </script>
   </body>
 </html>

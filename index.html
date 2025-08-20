@@ -1,92 +1,96 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Q2 Earnings — Interactive RevealJS Deck</title>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quarterly Earnings Report - 22f3002203@ds.study.iitm.ac.in</title>
+    <meta name="email" content="22f3002203@ds.study.iitm.ac.in">
+    <style>
+      .hidden-email { display: none; }
+      footer { position: absolute; bottom: 10px; width: 100%; text-align: center; font-size: 14px; color: #aaa; }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-  <!-- Reveal.js core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css" />
+        <!-- Title slide -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <h3>22f3002203@ds.study.iitm.ac.in</h3>
+          <p>Contact: 22f3002203@ds.study.iitm.ac.in</p>
+          <aside class="notes">
+            Welcome everyone. This is the quarterly earnings report with my contact email included.
+          </aside>
+        </section>
 
-  <style>
-    .kpi { display:grid; grid-template-columns: repeat(3, minmax(180px, 1fr)); gap: 1.2rem; }
-    .kpi .card { border-radius: 16px; padding: 1rem 1.2rem; background: rgba(255,255,255,0.06); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
-    .kpi .label { font-size: .9rem; opacity: .8; }
-    .kpi .value { font-size: 1.6rem; font-weight: 700; }
-    .reveal .small { font-size: .8rem; }
-    .reveal pre code { font-size: .9rem; }
-  </style>
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
+        <!-- Markdown slide -->
+        <section data-markdown>
+          <textarea data-template>
+# Financial Overview
 
-      <!-- Title Slide -->
-      <section>
-        <h2>Quarterly Earnings Report — Q2</h2>
-        
-        <!-- Email-->
-        <div data-e="email">22f3002203@ds.study.iitm.ac.in</div>
-        <span style="display:none;">Email</span>
-         <p 22f3002203@ds.study.iitm.ac.in </p>
+- Revenue grew by 15% YoY <!-- .element: class="fragment" -->
+- Expenses reduced by 8% <!-- .element: class="fragment" -->
+- Net profit margin up to 12% <!-- .element: class="fragment" -->
 
-        <p class="fragment">Interactive, data-driven, and remote-friendly</p>
-        <aside class="notes">Welcome everyone. This deck demonstrates a modern RevealJS workflow.</aside>
-      </section>
+**Contact:** 22f3002203@ds.study.iitm.ac.in
+          </textarea>
+        </section>
 
-      <!-- Markdown Slide -->
-      <section data-markdown>
-        <textarea data-template>
-## Q2 Highlights _(Markdown)_
+        <!-- Code sample -->
+        <section>
+          <h2>Code Sample</h2>
+          <pre><code class="language-python">
+def net_profit(revenue, expenses):
+    return revenue - expenses
 
-- **Revenue:** $1.24B *(+8% YoY)*
-- **Gross Margin:** 42.1%
-- **EPS (Diluted):** $1.18
-- **Cash & Equivalents:** $2.9B
-        </textarea>
-      </section>
+print(net_profit(1000000, 750000))
+          </code></pre>
+          <aside class="notes">
+            Here I show a Python function to calculate net profit.
+          </aside>
+        </section>
 
-      <!-- KPIs -->
-      <section>
-        <h3>Key Performance Indicators</h3>
-        <div class="kpi">
-          <div class="card fragment"><div class="label">Revenue</div><div class="value">$1.24B</div></div>
-          <div class="card fragment"><div class="label">Operating Income</div><div class="value">$246M</div></div>
-          <div class="card fragment"><div class="label">Free Cash Flow</div><div class="value">$178M</div></div>
-        </div>
-      </section>
+        <!-- Math formula -->
+        <section>
+          <h2>Financial Formula</h2>
+          <p>
+            Net Present Value (NPV):  
+            $$NPV = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t}$$
+          </p>
+          <aside class="notes">
+            This formula is critical for evaluating investments.
+          </aside>
+        </section>
 
-      <!-- Contact Slide -->
-      <section>
-        <h3>Contact</h3>
-        
-        <!-- Email-->
-        <div data-e="email">22f3002203@ds.study.iitm.ac.in</div>
-        <span style="display:none;">Email</span>
+        <!-- Plain paragraph with email -->
+        <section>
+          <h2>Contact Information</h2>
+          <p>My email is: 22f3002203@ds.study.iitm.ac.in</p>
+        </section>
 
-      </section>
+        <!-- Hidden email div -->
+        <div class="hidden-email">22f3002203@ds.study.iitm.ac.in</div>
 
+      </div>
     </div>
-  </div>
 
-  <!-- Reveal.js and plugins -->
-  <script type="module">
-    import Reveal from 'https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.esm.js';
-    import Markdown from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.esm.js';
-    import Highlight from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.esm.js';
-    import Notes from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.esm.js';
-    import MathJax from 'https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.esm.js';
+    <!-- Footer with email on all slides -->
+    <footer>22f3002203@ds.study.iitm.ac.in</footer>
 
-    const deck = new Reveal({
-      hash: true,
-      slideNumber: true,
-      transition: 'slide',
-      plugins: [ Markdown, Highlight, Notes, MathJax ]
-    });
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
 
-    deck.initialize();
-  </script>
-</body>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealMath.KaTeX ]
+      });
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
